@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Sayfası</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            background-color: white;
+            width: 60%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Form tasarımı */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            background-color: #f9f9f9;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            background-color: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        button {
+            padding: 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Bilgi kutusu */
+        .info-box {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .info-box p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .info-box a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sabit köşe kutusu - firma bilgileri */
+        .company-info {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            font-size: 0.9em;
+        }
+
+        .company-info h3 {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .company-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .company-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .company-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobil uyumlu tasarım */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .company-info {
+                width: 200px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Bizimle İletişime Geçin</h1>
+        <form action="/submit-form" method="POST">
+            <label for="ad">Adınız</label>
+            <input type="text" id="ad" name="ad" placeholder="Adınızı girin" required>
+
+            <label for="email">E-posta Adresiniz</label>
+            <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+
+            <label for="mesaj">Mesajınız</label>
+            <textarea id="mesaj" name="mesaj" placeholder="Mesajınızı yazın" required></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+
+        <div class="info-box">
+            <p>Yardım almak için <a href="mailto:info@example.com">info@example.com</a> adresine e-posta gönderebilirsiniz.</p>
+        </div>
+    </div>
+
+    <!-- Firma Bilgileri Kutusu -->
+    <div class="company-info">
+        <h3>Örnek Firma</h3>
+        <p><strong>Adres:</strong> Örnek Mah. No: 123, İstanbul</p>
+        <p><strong>Telefon:</strong> +90 555 123 45 67</p>
+        <p><strong>E-posta:</strong> <a href="mailto:info@ornekfirma.com">info@ornekfirma.com</a></p>
+    </div>
+
+</body>
+
+</html>
